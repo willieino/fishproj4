@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../Css/CatchFrm.css';
-import AddNewInput from "./AddNewInput";
-import { BarChart, Bar, XAxis, YAxis } from "recharts"
-import data from "../Tables/tblBait"
+//import AddNewInput from "./AddNewInput";
+//import data from "../Tables/tblBait"
 
 class CatchFrm extends Component {
   constructor(props) {
@@ -27,14 +26,10 @@ class CatchFrm extends Component {
 
   componentDidMount() {
     localStorage.setItem('viewTrip', "catch");
-    let pageType = 'catch'
+    //let pageType = 'catch'
 
     this.setState(() => ({ viewTrip: this.pageType, data: this.data }));
   }
-
-  /* const data = () => { 
-    [2, 3], [3, 3], [4, 2], [5,2]
-  }; */
 
   handleChange = (event) => {
     const target = event.target;
@@ -137,28 +132,7 @@ class CatchFrm extends Component {
             <div className="catch-text">Image:</div>
             <input type="text" className="catch" value={this.props.value} onChange={this.props.changeHandler} name="Photo" />
             <button className="save-catch-data" value="SaveCatchData" onSubmit={this.props.catchSubmit} name="SaveCatchData">Save Changes</button>
-        
-          </div><div className="chart-container">
-          <BarChart width={600} height={300} data={
-            [{ name: 'a', value: 12 },
-            { name: 'b', value: 6 }]
-        }>
-  <XAxis dataKey="name"   />
-  <YAxis />
-  <Bar type="monotone" /* dataKey="name" */ barSize={30} fill="#8884d8"
-   />
-</BarChart></div>
-          {/*  <AddNewInput /> 
-        <select value={this.state.editor} name="editor" onChange={this.handleChange} className="select-place">
-              <option value="Lake Murray">Lake Murray</option>
-              <option value="Lake Jennings">Lake Jennings</option>
-              <option value="Add">Add new Place...</option>
-            </select>    */}
-          {/*  <div className="button-container"> 
-         <button type="submit" className="nav-button" name="saveButton" onSubmit={this.props.handleSubmit}>Save Changes</button>
-       <button className="nav-button" value="Clear Fields" name="clear" onClick={this.props.clickHandler}>Clear Fields</button> 
-       <button className="nav-button" name="cancel">Cancel Changes</button>  
-       </div> */}
+          </div>
         </div>
       </form>
     );

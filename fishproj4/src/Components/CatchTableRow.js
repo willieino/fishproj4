@@ -55,52 +55,59 @@ class CatchTableRow extends Component {
   }
 
   render() {
-
+    let classNames = require('classnames');
+    let temp = this.props.id;
+    ((temp % 2) === 0)? temp = false: temp = true;
+    console.log("temp", temp)
+		let catchTableRow = classNames({
+			'column2': true,
+			'hi-lite': temp
+		})
     return (
       <div className="catch-table-row">
-        <div id="id" className="heading column2">{this.props.id}</div>
-        <div className="species column2">{this.props.species}</div>
-        <div className="catchDate column2">{this.props.catchDate}</div>
-        <div className="catchs column2">{this.props.trip}</div>
-        <div className="location column2">{this.props.location}</div>
-        <div className="angler column2">{this.props.angler}</div>
-        <div className="quantity column2">{this.props.quantity}</div>
-        <div className="weight column2">{this.props.weight}</div>
-        <div className="length column2">{this.props.length}</div>
-        <div id="girth" className="girth column2">{this.props.girth}</div>
-        <div id="fightTime" className="fightTime column2">{this.props.fightTime}</div>
-        <div className="column2">{this.props.outcome}</div>
-        <div className="fish-style column2">{this.props.style}</div>
-        <div className="bait column2">{this.props.bait}</div>
-        <div className="baitColor column2">{this.props.baitColor}</div>
-        <div className="notes column2">{this.props.notes}</div>
-        <div className="airTemp column2">{this.props.airTemp}</div>
-        <div className="windDirection column2">{this.props.windDirection}</div>
-        <div className="wind column2">{this.props.wind}</div>
-        <div className="skyCondition column2">{this.props.skyCondition}</div>
-        <div id="lunarPhase" className="lunarPhase column2">{this.props.lunarPhase}</div>
-        <div id="pressure" className="pressure column2">{this.props.pressure}</div>
-        <div id="barometer" className="barometer column2">{this.props.barometer}</div>
-        <div className="waterTemp column2">{this.props.waterTemp}</div>
-        <div className="waterDepth column2">{this.props.waterDepth}</div>
-        <div className="waterPh column2">{this.props.waterPh}</div>
-        <div className="current column2">{this.props.current}</div>
-        <div className="bottom column2">{this.props.bottom}</div>
-        <div className="waterColor column2">{this.props.waterColor}</div>
-        <div className="tide column2">{this.props.tide}</div>
-        <div className="waterLevel column2">{this.props.waterLevel}</div>
-        <div id="seas" className="seas column2">{this.props.seas}</div>
-        <div id="rod" className="rod column2">{this.props.rod}</div>
-        <div id="reel" className="reel column2">{this.props.reel}</div>
-        <div className="hookSize column2">{this.props.hookSize}</div>
-        <div className="hookType column2">{this.props.hookType}</div>
-        <div className="sinkerWeight column2">{this.props.sinkerWeight}</div>
-        <div className="sinkerStyle column2">{this.props.sinkerStyle}</div>
-        <div className="lineTest column2">{this.props.lineTest}</div>
-        <div className="lineStyle column2">{this.props.lineStyle}</div>
-        <div className="lineColor column2">{this.props.lineColor}</div>
-        <div className="imgCaption column2">{this.props.imgCaption}</div>
-        <div id="photo" className="photo column2">{this.props.photo}</div>
+        <div id="id" className={catchTableRow}>{this.props.id}</div>
+        <div className={catchTableRow}>{this.props.species}</div>
+        <div id="catchDate" className={catchTableRow}>{this.props.catchDate}</div>
+        <div id="tripName" className={catchTableRow}>{this.props.trip}</div>
+        <div id="location" className={catchTableRow}>{this.props.location}</div>
+        <div id="angler" className={catchTableRow}>{this.props.angler}</div>
+        <div className={catchTableRow}>{this.props.quantity}</div>
+        <div className={catchTableRow}>{this.props.weight}</div>
+        <div className={catchTableRow}>{this.props.length}</div>
+        <div id="girth" className={catchTableRow}>{this.props.girth}</div>
+        <div id="fightTime" className={catchTableRow}>{this.props.fightTime}</div>
+        <div className={catchTableRow}>{this.props.outcome}</div>
+        <div id="fish-style" className={catchTableRow}>{this.props.style}</div>
+        <div className={catchTableRow}>{this.props.bait}</div>
+        <div className={catchTableRow}>{this.props.baitColor}</div>
+        <div id="catchNotes" className={catchTableRow}>{this.props.notes}</div>
+        <div className={catchTableRow}>{this.props.airTemp}</div>
+        <div className={catchTableRow}>{this.props.windDirection}</div>
+        <div id="wind" className={catchTableRow}>{this.props.wind}</div>
+        <div className={catchTableRow}>{this.props.skyCondition}</div>
+        <div id="lunarPhase" className={catchTableRow}>{this.props.lunarPhase}</div>
+        <div id="pressure" className={catchTableRow}>{this.props.pressure}</div>
+        <div id="barometer" className={catchTableRow}>{this.props.barometer}</div>
+        <div className={catchTableRow}>{this.props.waterTemp}</div>
+        <div className={catchTableRow}>{this.props.waterDepth}</div>
+        <div className={catchTableRow}>{this.props.waterPh}</div>
+        <div className={catchTableRow}>{this.props.current}</div>
+        <div className={catchTableRow}>{this.props.bottom}</div>
+        <div className={catchTableRow}>{this.props.waterColor}</div>
+        <div className={catchTableRow}>{this.props.tide}</div>
+        <div className={catchTableRow}>{this.props.waterLevel}</div>
+        <div id="seas" className={catchTableRow}>{this.props.seas}</div>
+        <div id="rod" className={catchTableRow}>{this.props.rod}</div>
+        <div id="reel" className={catchTableRow}>{this.props.reel}</div>
+        <div className={catchTableRow}>{this.props.hookSize}</div>
+        <div className={catchTableRow}>{this.props.hookType}</div>
+        <div className={catchTableRow}>{this.props.sinkerWeight}</div>
+        <div id="sinkerStyle" className={catchTableRow}>{this.props.sinkerStyle}</div>
+        <div className={catchTableRow}>{this.props.lineTest}</div>
+        <div className={catchTableRow}>{this.props.lineStyle}</div>
+        <div className={catchTableRow}>{this.props.lineColor}</div>
+        <div id="imgCaption" className={catchTableRow}>{this.props.imgCaption}</div>
+        <div id="photo" className={catchTableRow}>{this.props.photo}</div>
       </div>
     );
   }

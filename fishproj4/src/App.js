@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+//import { Route } from 'react-router-dom';
 import './App.css';
 import NavLeft from "./Components/NavLeft"
 import TripFrm from "./Components/TripFrm";
@@ -130,10 +130,10 @@ class App extends Component {
     //  window.location.reload();
   }
 
-  changeSelected = (e) => {
+  /* changeSelected = (e) => {
     e.preventDefault();
     const currentView = true;
-  }
+  } */
 
   clickHandler = e => {
     e.preventDefault();
@@ -286,7 +286,7 @@ class App extends Component {
           <div className="main-container">
             <NavLeft viewCatchData={this.viewCatchData} viewCharts={this.viewCharts} viewCatchForm={this.viewCatchForm} viewTripData={this.viewTripData} handleSubmit={this.handleSubmit} viewTrip={this.props.viewTrip} enterTrip={this.props.enterTrip} viewTripForm={this.viewTripForm} />
             <div className="main-display">
-              <TripFrm handleSubmit={this.handleSubmit} TripTbl={this.state.TripTbl} key={this.ID} Trip={this.props.Trip} StartDate={this.props.StartDate} TripTbl={this.TripTbl} Duration={this.props.Duration}
+              <TripFrm handleSubmit={this.handleSubmit} TripTbl={this.state.TripTbl} key={this.ID} Trip={this.props.Trip} StartDate={this.props.StartDate} Duration={this.props.Duration}
                 changeHandler={this.changeHandler} Place={this.props.Place} Photos={this.props.Photos} Notes={this.props.Notes} Anglers={this.props.Anglers} GPS1={this.props.GPS1} GPS2={this.props.GPS2} ImgCaption={this.props.ImgCaption} />
             </div>
           </div>

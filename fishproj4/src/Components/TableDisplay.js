@@ -32,7 +32,7 @@ class TableDisplay extends Component {
   render() {
 
     return (
-      <div className="table-display">{TripTbl.map((trips, index) => {
+      <div className="table-display"><div className="trip2-header">View of all Trip Information:</div>{TripTbl.map((trips, index) => {
         return <TableRow
           key={trips.ID}
           trip={trips.Trip}

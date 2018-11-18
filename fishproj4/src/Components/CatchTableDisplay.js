@@ -62,7 +62,7 @@ class CatchTableDisplay extends Component {
   render() {
 
     return (
-      <div className="catch-table-display">{CatchTbl.map((catches, index) => {
+      <div className="catch-table-display"><div className="trip2-header">View of all Catch Information:</div>{CatchTbl.map((catches, index) => {
         return <CatchTableRow
           key={catches.ID}
           id={catches.ID}

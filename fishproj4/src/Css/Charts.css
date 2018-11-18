@@ -28,10 +28,11 @@
     flex-direction: column;
     width: auto;
     height: 800px;
-    /* border: 2px solid blue; */
+   /*   border: 2px solid blue;  */
 }
 
 .charts {
+    margin-top: 80px;
     width: 800px;
     /* border: 2px solid green; */
     height: 600px;
@@ -49,31 +50,38 @@
 }
 
 .nav-icon-1:hover {
-    background-image: url('../Graphics/fish17.png');
+    background-image: url('../Graphics/fish20.png');
 }
 
 #cicon2 {
-    background-image: url('../Graphics/bars1.png');
-   /*  width: 120px; */
+    background-image: url('../Graphics/fish17.png');
+     width: 106px;
 }
 /* view catches */
 #cicon3 {
-    background-image: url('../Graphics/bars3.png');
+    background-image: url('../Graphics/bars1.png');
+    /* margin-top: 4px; */
+    width: 80px;
+   /*  border: 2px solid blue; */
     /* width: 120px; */
 }
 /* enter catch info */
 #cicon4 {
     background-image: url('../Graphics/bars1.png');
+    /* margin-top: 4px; */
+    width: 80px;
+   
     /* width: 120px; */
 }
 /* save changes */
 #cicon5 {
-    background-image: url('../Graphics/bars3.png');
+    background-image: url('../Graphics/fish17.png');
     width: 100px;
 }
 /* clear fields */
 #cicon6 {
     background-image: url('../Graphics/fish17.png');
+    width: 80px;
 }
 /* cancal changes */
 #cicon7 {
@@ -92,7 +100,7 @@
 }
 
 #cicon2:hover {
-    background-image: url('../Graphics/bars2.png');
+    background-image: url('../Graphics/cfish1.png');
 }
 
 #cicon3:hover {
@@ -100,11 +108,11 @@
 }
 
 #cicon4:hover {
-    background-image: url('../Graphics/bars3.png');
+    background-image: url('../Graphics/bars2.png');
 }
 
 #cicon5:hover {
-    background-image: url('../Graphics/bars1.png');
+    background-image: url('../Graphics/cfish1.png');
 }
 
 #cicon6:hover {
@@ -112,7 +120,7 @@
 }
 
 #cicon7:hover {
-    background-image: url('../Graphics/fish17.png');
+    background-image: url('../Graphics/cfish1.png');
 }
 
 #cicon8:hover {

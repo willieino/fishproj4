@@ -2,7 +2,7 @@
 background-color: rgb(15, 14, 83);
 color: white;
 /* border: 2px solid red; */
-width: 100%;
+width: 800px;
 min-width: 800px;
 }
 
@@ -68,7 +68,7 @@ background-color: rgb(44, 44, 168);
 }
 
 .save-catch-data:hover {
-background-color: blue;
+  background-color: rgb(26, 6, 199);
 }
 
 .charts {
