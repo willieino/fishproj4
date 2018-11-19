@@ -240,6 +240,10 @@ body {
     background-color: rgb(10, 9, 58);
 }
 
+.column:hover {
+    background-color: rgb(42, 167, 224);
+}
+
 .column2 {
     border: 1px solid rgba(128, 128, 128, 0.555);
     width: 65px;
@@ -256,6 +260,10 @@ body {
 
 .hi-lite {
     background-color: rgb(57, 84, 207);
+}
+
+.hi-lite:hover {
+    background-color: rgb(42, 167, 224);
 }
 
 .trip-text {
@@ -293,20 +301,7 @@ body {
     margin-bottom: 8px;
 }
 
-.nav-left-icon-1 {
-    background-image: url('./Graphics/fish16.png');
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 64px;
-    margin-left: auto;
-    margin-right: auto;
-    /* border: 1px solid black;  */
-    /* animation: move-it; */
-}
 
-.nav-left-icon-1:hover {
-    background-image: url('./Graphics/fish15.png');
-}
 
 .text-save {
     display: inline-block;
@@ -346,7 +341,7 @@ body {
 .catch-table-display {
     /*  display: flex; */
     /* flex-direction: row; */
-    width: 100%;
+    width: 3000px;
     /* border: 2px solid green; */
 }
 
@@ -381,44 +376,63 @@ body {
     width: 200px;
 }
 
+.nav-left-icon-1 {
+    background-image: url('./Graphics/fish16.png');
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid black;  */
+    /* animation: move-it; */
+}
 
+.nav-left-icon-1:hover {
+    background-image: url('./Graphics/fish15.png');
+}
 /* enter trip info */
 #icon2 {
     background-image: url('./Graphics/fish22.png');
 }
 /* view catches */
 #icon3 {
-    background-image: url('./Graphics/fish11.png');
-   
+    background-image: url('./Graphics/fish12.png');
+   height: 48px;
 }
 /* enter catch info */
 #icon4 {
     background-image: url('./Graphics/fish7.png');
     width: 120px;
+    height: 52px;
 }
-/* save changes */
+/* view charts */
 #icon5 {
     background-image: url('./Graphics/fish24.png');
     width: 140px;
+    height: 50px;
 }
 /* clear fields */
 #icon6 {
     background-image: url('./Graphics/fish14.png');
+    height: 40px;
 }
 /* cancal changes */
 #icon7 {
     background-image: url('./Graphics/fish9.png');
     width: 120px;
+    height: 50px;
 }
 /* print */
 #icon8 {
     background-image: url('./Graphics/fish7.png');
     width: 120px;
+    height: 50px;
 }
 /* logout */
 #icon9 {
     background-image: url('./Graphics/fish13.png');
     width: 140px;
+    height: 40px;
 }
 
 #icon2:hover {
@@ -426,7 +440,7 @@ body {
 }
 
 #icon3:hover {
-    background-image: url('./Graphics/fish12.png');
+    background-image: url('./Graphics/fish11.png');
 }
 
 #icon4:hover {
@@ -450,7 +464,7 @@ body {
 }
 
 #icon9:hover {
-    background-image: url('./Graphics/fish10.png');
+    background-image: url('./Graphics/fish14.png');
 }
 
 .save-trip-data {
@@ -475,4 +489,16 @@ border: 2px solid yellow;
     flex-direction: column;
 /* border: 2px solid red; */
 
+}
+
+#file-upload {
+cursor: pointer;
+}
+
+.chart-type {
+/* border: 2px solid green; */
+height: 30px;
+color: white;
+text-align: center;
+width: 84%;
 }

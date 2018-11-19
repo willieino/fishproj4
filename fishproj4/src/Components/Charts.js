@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import '../Css/Charts.css';
 //import TripTbl from "../Tables/tripTbl";
 import CatchTbl from "../Tables/catchTbl";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
 class Charts extends Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class Charts extends Component {
       fishy: [],
       xBar: "",
       xLabel: "",
+      chartType: "",
     })
     console.log(this.state)
     //let fishy = this.fishy
@@ -194,9 +195,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    let chartType = "By Fishing Style"
     let tmp = "Style"
     let barColor = '#f9fc3d';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
   render() {
 
@@ -233,7 +235,7 @@ class Charts extends Component {
           </div>
 
         </form>
-        <div className="charts">
+        <div className="charts"><div className="chart-type">{this.state.chartType}</div>
           <div className="chart-container"> <BarChart width={650} height={400} data={this.state.fishy}>
            
             <Tooltip /><CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey={this.state.xBar} /> <YAxis label={{ value: this.state.xLabel, angle: -90, position: 'insideLeft' }} /> <Bar dataKey='Qty' fill={this.state.color} />

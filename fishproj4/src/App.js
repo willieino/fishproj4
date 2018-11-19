@@ -154,7 +154,7 @@ class App extends Component {
       GPS2: this.state.GPS2,
       ImgCaption: this.state.ImgCaption
     }
-    this.setState(() => ({ TripTbl: this.TripTbl, newTripRec: newTripRec }));
+   // this.setState(() => ({ TripTbl: this.TripTbl, newTripRec: newTripRec }));
     TripTbl.push(newTripRec);
     this.setState(() => ({ TripTbl: this.TripTbl }));
   }
@@ -207,7 +207,7 @@ class App extends Component {
       ImgCaption: this.state.ImgCaption,
       photo: this.state.Photo,
     }
-    this.setState(() => ({ CatchTbl: this.CatchTbl, newCatchRec: newCatchRec }));
+   // this.setState(() => ({ CatchTbl: this.CatchTbl, newCatchRec: newCatchRec }));
     CatchTbl.push(newCatchRec);
     this.setState(() => ({ CatchTbl: this.CatchTbl }));
     console.log("CATchtable: ", this.state)
