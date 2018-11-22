@@ -87,7 +87,7 @@ class App extends Component {
   changeHandler = (e) => {
 
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state)
+  //  console.log(this.state)
   }
 
   viewTripForm = (e) => {
@@ -95,7 +95,7 @@ class App extends Component {
     localStorage.setItem('viewTrip', "tripForm");
     let pageType = `tripForm`
     this.setState({ viewTrip: pageType });
-    console.log("viewTripForm", this.state)
+    //console.log("viewTripForm", this.state)
     //window.location.reload();
   }
 
@@ -210,13 +210,13 @@ class App extends Component {
    // this.setState(() => ({ CatchTbl: this.CatchTbl, newCatchRec: newCatchRec }));
     CatchTbl.push(newCatchRec);
     this.setState(() => ({ CatchTbl: this.CatchTbl }));
-    console.log("CATchtable: ", this.state)
+   // console.log("CATchtable: ", this.state)
   }
 
   render() {
 
     let pageType = localStorage.getItem('viewTrip');
-    console.log("pagetype: ", pageType)
+    //console.log("pagetype: ", pageType)
     switch (pageType) {
       case 'catch':
         return <div className="App">
@@ -311,7 +311,8 @@ class App extends Component {
          </div>
        </div>
      </div>;
-    };
+     default: return  <div>Error in code </div>;
+        };
   }
 }
 

@@ -18,15 +18,15 @@ class Charts extends Component {
       xLabel: "",
       chartType: "",
     })
-    console.log(this.state)
+  //  console.log(this.state)
     //let fishy = this.fishy
    // const Recharts = { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend };
   }
 
   componentDidMount() {
 
-    console.log("in the nav componentDidMount")
-    console.log(this.state)
+   // console.log("in the nav componentDidMount")
+   // console.log(this.state)
   }
 
   chartBaitType = (e) => {
@@ -52,7 +52,7 @@ class Charts extends Component {
     const tmp = "Bait"
     const barColor = '#463dfc';
     this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType }); 
-    console.log(this.state)
+   // console.log(this.state)
   }
 
   chartFishCaught = (e) => {

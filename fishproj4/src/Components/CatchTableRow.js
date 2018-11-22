@@ -58,7 +58,7 @@ class CatchTableRow extends Component {
     let classNames = require('classnames');
     let temp = this.props.id;
     ((temp % 2) === 0)? temp = false: temp = true;
-    console.log("temp", temp)
+   // console.log("temp", temp)
 		let catchTableRow = classNames({
 			'column2': true,
 			'hi-lite': temp
