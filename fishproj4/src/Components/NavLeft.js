@@ -36,7 +36,7 @@ class NavLeft extends Component {
             <div id="icon5" className="nav-left-icon-1" onClick={this.props.viewCharts}></div>
             <button className="nav-button" value="viewCharts" onClick={this.props.viewCharts} name="viewCharts">View Charts</button>
           </li>
-          <li className="nav-left-item">
+         {/*  <li className="nav-left-item">
             <div  id="icon6" className="nav-left-icon-1"></div>
             <button className="nav-button" value="ClearFields" onClick={this.props.handleSubmit} name="ClearFields">Clear Fields</button>
           </li>
@@ -49,9 +49,9 @@ class NavLeft extends Component {
             <button className="nav-button" value="Print" onClick={this.props.handleSubmit} name="Print">Print</button>
           </li>
           <li className="nav-left-item">
-            <div  id="icon9" className="nav-left-icon-1"></div>
-            <button className="nav-button" value="Logout" onClick={this.props.handleSubmit} name="Logout">Log Out</button>
-          </li>
+            <div  id="icon9" className="nav-left-icon-1" disabled={true}></div>
+            <button className="nav-button" value="Logout" onClick={this.props.handleSubmit} disabled={true} name="Logout">Log Out</button>
+          </li> */}
         </ul>
       </form>
     );

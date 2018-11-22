@@ -34,14 +34,14 @@ class TripFrm extends Component {
   componentDidMount() {
 
     this.setState = () => ({ TripTbl: this.props.TripTbl })
-    console.log("in the tripfrm component did mount")
-    console.log(this.state)
+    //console.log("in the tripfrm component did mount")
+   // console.log(this.state)
   }
 
-  eventLogger = (e: MouseEvent, data: Object) => {
+ /*  eventLogger = (e: MouseEvent, data: Object) => {
     console.log('Event: ', e);
     console.log('Data: ', data);
-  };
+  }; */
 
 
   handleChange = (event) => {
@@ -53,7 +53,7 @@ class TripFrm extends Component {
       [name]: value,
       TripTbl: TripTbl
     });
-    console.log("this state in trip for select", this.state)
+   // console.log("this state in trip for select", this.state)
   }
 
   render() {

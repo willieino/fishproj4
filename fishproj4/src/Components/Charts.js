@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
 import '../Css/Charts.css';
-//import TripTbl from "../Tables/tripTbl";
 import CatchTbl from "../Tables/catchTbl";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts"
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
 class Charts extends Component {
   constructor(props) {
@@ -18,16 +16,17 @@ class Charts extends Component {
       fishy: [],
       xBar: "",
       xLabel: "",
+      chartType: "",
     })
-    console.log(this.state)
+  //  console.log(this.state)
     //let fishy = this.fishy
    // const Recharts = { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend };
   }
 
   componentDidMount() {
 
-    console.log("in the nav componentDidMount")
-    console.log(this.state)
+   // console.log("in the nav componentDidMount")
+   // console.log(this.state)
   }
 
   chartBaitType = (e) => {
@@ -49,10 +48,11 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Bait Type:"
     const tmp = "Bait"
     const barColor = '#463dfc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor }); 
-    console.log(this.state)
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType }); 
+   // console.log(this.state)
   }
 
   chartFishCaught = (e) => {
@@ -74,9 +74,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fish Species:"
     let tmp = "Species"
     let barColor = '#3da6fc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartAngler = (e) => {
@@ -98,9 +99,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Angler:"
     let tmp = "Angler"
     let barColor = '#3da6fc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartRodType = (e) => {
@@ -122,9 +124,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fishing Rod:"
     let tmp = "Rod"
     let barColor = '#463dfc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartLineType = (e) => {
@@ -146,9 +149,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fishing Line Type:"
     let tmp = "LineStyle"
     let barColor = '#3da6fc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartBaitColor = (e) => {
@@ -170,9 +174,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Bait Color:"
     let tmp = "BaitColor"
     let barColor = '#fc3d8d';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartFishStyle = (e) => {
@@ -194,9 +199,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fishing Style"
     let tmp = "Style"
     let barColor = '#f9fc3d';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
   render() {
 
@@ -233,7 +239,7 @@ class Charts extends Component {
           </div>
 
         </form>
-        <div className="charts">
+        <div className="charts"><div className="chart-type">{this.state.chartType}</div>
           <div className="chart-container"> <BarChart width={650} height={400} data={this.state.fishy}>
            
             <Tooltip /><CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey={this.state.xBar} /> <YAxis label={{ value: this.state.xLabel, angle: -90, position: 'insideLeft' }} /> <Bar dataKey='Qty' fill={this.state.color} />

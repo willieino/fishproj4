@@ -25,8 +25,8 @@ class TableDisplay extends Component {
   }
 
   componentDidMount() {
-    console.log("in the tabledisplay component did mount")
-    console.log(this.state)
+   // console.log("in the tabledisplay component did mount")
+   // console.log(this.state)
   }
 
   render() {

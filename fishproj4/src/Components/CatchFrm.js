@@ -130,7 +130,7 @@ class CatchFrm extends Component {
             <div className="catch-text">Image Caption:</div>
             <input type="text" className="catch" value={this.props.value} onChange={this.props.changeHandler} name="ImgCaption" />
             <div className="catch-text">Image:</div>
-            <input type="text" className="catch" value={this.props.value} onChange={this.props.changeHandler} name="Photo" />
+            <input type="text" id="file-upload" className="catch" value={this.props.value} placeholder="upload image file..." onChange={this.props.changeHandler} name="Photo" />
             <button className="save-catch-data" value="SaveCatchData" onSubmit={this.props.catchSubmit} name="SaveCatchData">Save Changes</button>
           </div>
         </div>

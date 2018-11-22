@@ -24,8 +24,8 @@ class AddNewInput extends Component {
     }
 
     componentDidMount() {
-        console.log("in the addnewinput component did mount")
-        console.log(this.state)
+      //  console.log("in the addnewinput component did mount")
+      //  console.log(this.state)
     }
 
     handleChange = (event) => {
