@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
 import '../Css/Charts.css';
-//import TripTbl from "../Tables/tripTbl";
 import CatchTbl from "../Tables/catchTbl";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
@@ -50,9 +48,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Bait Type:"
     const tmp = "Bait"
     const barColor = '#463dfc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor }); 
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType }); 
     console.log(this.state)
   }
 
@@ -75,9 +74,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fish Species:"
     let tmp = "Species"
     let barColor = '#3da6fc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartAngler = (e) => {
@@ -99,9 +99,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Angler:"
     let tmp = "Angler"
     let barColor = '#3da6fc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartRodType = (e) => {
@@ -123,9 +124,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fishing Rod:"
     let tmp = "Rod"
     let barColor = '#463dfc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartLineType = (e) => {
@@ -147,9 +149,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Fishing Line Type:"
     let tmp = "LineStyle"
     let barColor = '#3da6fc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartBaitColor = (e) => {
@@ -171,9 +174,10 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
+    const chartType = "By Bait Color:"
     let tmp = "BaitColor"
     let barColor = '#fc3d8d';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor });
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
 
   chartFishStyle = (e) => {
@@ -195,7 +199,7 @@ class Charts extends Component {
       }
       tmpArray.push(fish);
     }
-    let chartType = "By Fishing Style"
+    const chartType = "By Fishing Style"
     let tmp = "Style"
     let barColor = '#f9fc3d';
     this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
