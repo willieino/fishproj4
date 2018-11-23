@@ -311,7 +311,7 @@ class App extends Component {
          </div>
        </div>
      </div>;
-     default: return  <div>Error in code </div>;
+   
         };
   }
 }

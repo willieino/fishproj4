@@ -130,3 +130,12 @@
 #cicon9:hover {
     background-image: url('../Graphics/fish15.png');
 }
+
+.new-table {
+border: 2px solid green;
+height: 800px;
+width: 800px;
+background-color: white;
+color: black;
+
+}

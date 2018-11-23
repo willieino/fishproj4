@@ -1,4 +1,4 @@
 [build]
-base = "fishproj4/"
+base = "/fishproj4"
 publish = "fishproj4/build"
 command = "yarn build"

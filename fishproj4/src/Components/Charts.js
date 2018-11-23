@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import '../Css/Charts.css';
 import CatchTbl from "../Tables/catchTbl";
+import CatchHeaders from "../Tables/catchHeaders";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+/* import ReactTable from "react-table"; */
+import "react-table/react-table.css";
 
 class Charts extends Component {
   constructor(props) {
@@ -10,6 +13,7 @@ class Charts extends Component {
     this.state = ({
       TripTbl: [],
       CatchTbl: [],
+      CatchHeaders: [],
       chartToDisplay: "",
       enterTrip: false,
       color: "",
@@ -18,16 +22,21 @@ class Charts extends Component {
       xLabel: "",
       chartType: "",
     })
-  //  console.log(this.state)
+    //  console.log(this.state)
     //let fishy = this.fishy
-   // const Recharts = { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend };
+    // const Recharts = { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend };
   }
 
   componentDidMount() {
 
-   // console.log("in the nav componentDidMount")
-   // console.log(this.state)
+    this.setState(() => ({ CatchTbl: CatchTbl, CatchHeaders: CatchHeaders }));
+
+
+    // console.log("in the nav componentDidMount")
+    // console.log(this.state)
   }
+
+
 
   chartBaitType = (e) => {
     e.preventDefault();
@@ -51,8 +60,8 @@ class Charts extends Component {
     const chartType = "By Bait Type:"
     const tmp = "Bait"
     const barColor = '#463dfc';
-    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType }); 
-   // console.log(this.state)
+    this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
+    // console.log(this.state)
   }
 
   chartFishCaught = (e) => {
@@ -204,7 +213,9 @@ class Charts extends Component {
     let barColor = '#f9fc3d';
     this.setState({ fishy: tmpArray, xBar: tmp, xLabel: tmp, color: barColor, chartType: chartType });
   }
+
   render() {
+
 
     return (
       <div className="chart-container">
@@ -241,10 +252,15 @@ class Charts extends Component {
         </form>
         <div className="charts"><div className="chart-type">{this.state.chartType}</div>
           <div className="chart-container"> <BarChart width={650} height={400} data={this.state.fishy}>
-           
-            <Tooltip /><CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey={this.state.xBar} /> <YAxis label={{ value: this.state.xLabel, angle: -90, position: 'insideLeft' }} /> <Bar dataKey='Qty' fill={this.state.color} />
-          </BarChart></div>
 
+            <Tooltip /><CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey={this.state.xBar} /> <YAxis label={{ value: this.state.xLabel, angle: -90, position: 'insideLeft' }} /> <Bar dataKey='Qty' fill={this.state.color} />
+          </BarChart></div><div className="new-table">
+           {/*  <ReactTable
+              data={this.state.CatchTbl}
+              columns={this.state.CatchHeaders}
+              defaultPageSize={10}
+              className="-striped -highlight"
+            /> */}</div>
         </div>
       </div>
     );
@@ -269,3 +285,24 @@ export default Charts;
   tally[Species] = (tally[Species] || 0) + 1;
   return tally;
 }, {}) */
+
+
+/* {[ { Header: "Name", columns: [ { Header: "Species", accessor: "Species" }, { Header: "Location", id: "id",  accessor: "Location" } ]
+                },
+                { Header: "Info", columns: [ { Header: "Angler",  accessor: "Angler" },
+                    {
+                      Header: "Bait",
+                      accessor: "Bait"
+                    }
+                  ]
+                },
+                {
+                  Header: 'Stats',
+                  columns: [
+                    {
+                      Header: "Weight",
+                      accessor: "Weight"
+                    }
+                  ]
+                }
+              ]} */
