@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import CatchTbl from "../Tables/catchTbl"
 import CatchTableRow from "./CatchTableRow"
 import '../App.css';
+import ReactTable from "react-table"; 
+import "react-table/react-table.css";
+import CatchHeaders from "../Tables/catchHeaders";
 
 class CatchTableDisplay extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      CatchTbl: [],
+      CatchHeaders: [],
       species: "",
       catchDate: "",
       trip: "",
@@ -56,7 +61,7 @@ class CatchTableDisplay extends Component {
   }
 
   componentDidMount() {
-    
+    this.setState(() => ({ CatchTbl: CatchTbl, CatchHeaders: CatchHeaders }));
   }
 
   render() {
@@ -108,7 +113,16 @@ class CatchTableDisplay extends Component {
           lineColor={catches.LineColor}
           imgCaption={catches.ImgCaption}
           photo={catches.Photo} />
-      })} </div>
+      })}<div className="new-table">
+      <ReactTable
+       data={this.state.CatchTbl}
+       columns={this.state.CatchHeaders}
+       defaultPageSize={10}
+       style={{
+         height: "400px" // This will force the table body to overflow and scroll, since there is not enough room
+       }}
+       className="-striped -highlight"
+     /></div> </div>
     );
   }
 }

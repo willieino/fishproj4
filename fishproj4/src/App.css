@@ -517,3 +517,15 @@ body {
     text-align: center;
     width: 84%;
 }
+
+.new-table {
+    border: 2px solid green;
+    height: 900px;
+    width: 5000px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    
+    }
+    

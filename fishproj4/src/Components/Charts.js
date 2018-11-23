@@ -3,7 +3,7 @@ import '../Css/Charts.css';
 import CatchTbl from "../Tables/catchTbl";
 import CatchHeaders from "../Tables/catchHeaders";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
-/* import ReactTable from "react-table"; */
+import ReactTable from "react-table"; 
 import "react-table/react-table.css";
 
 class Charts extends Component {
@@ -255,12 +255,15 @@ class Charts extends Component {
 
             <Tooltip /><CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey={this.state.xBar} /> <YAxis label={{ value: this.state.xLabel, angle: -90, position: 'insideLeft' }} /> <Bar dataKey='Qty' fill={this.state.color} />
           </BarChart></div><div className="new-table">
-           {/*  <ReactTable
+             <ReactTable
               data={this.state.CatchTbl}
               columns={this.state.CatchHeaders}
               defaultPageSize={10}
+              style={{
+                height: "200px" // This will force the table body to overflow and scroll, since there is not enough room
+              }}
               className="-striped -highlight"
-            /> */}</div>
+            /></div>
         </div>
       </div>
     );
