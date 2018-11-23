@@ -28,7 +28,7 @@ class TripFrm extends Component {
     }
     //const  Recharts = {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend};
     //Draggable.create("#dragMe");
-       
+    //"react-charts": "^1.0.10", 
   }
 
   componentDidMount() {
