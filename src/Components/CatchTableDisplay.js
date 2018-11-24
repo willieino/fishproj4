@@ -56,7 +56,6 @@ class CatchTableDisplay extends Component {
       imgCation: "",
       photo: "",
       viewTrip: null,
-      CatchTbl: [],
     }
   }
 
